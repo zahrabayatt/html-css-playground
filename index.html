@@ -5,45 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      table,
-      td,
-      th {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 5px;
-      }
-      tfoot {
-        text-align: left;
+      .highlight {
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
-    <table>
-      <thead>
-        <tr>
-          <th colspan="2">Table</th>
-        </tr>
-        <tr>
-          <th>Category</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Marketing</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>Accounting</td>
-          <td>$200</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>Total</th>
-          <th>$300</th>
-        </tr>
-      </tfoot>
-    </table>
+    <!-- generic container -->
+    <div class="article">
+      <h2>Heading</h2>
+      <p>Published October 13 2023 12:39</p>
+      <p>
+        <span class="highlight">Lorem</span>, ipsum dolor sit amet consectetur
+        adipisicing elit. Possimus, autem? Voluptates delectus nihil iste magnam
+        nostrum quasi ab et ratione corrupti deleniti ea, similique architecto
+        id ipsum numquam, provident sint!
+      </p>
+    </div>
+
+    <!-- semantic container -->
+    <article class="article">
+      <h2>Heading</h2>
+      <p>
+        Published
+        <time datetime="2023-10-13 00:41">October 13 2023 12:39</time>p>
+      </p>
+      <p>
+        <mark>Lorem</mark> psum dolor, sit amet consectetur adipisicing elit.
+        Consequuntur placeat dicta nulla quas pariatur illum veniam ipsam esse
+        qui beatae, aperiam ducimus tempora ipsa praesentium commodi soluta. At,
+        hic ut.
+      </p>
+      <figure>
+        <img src="" alt="" />
+        <figcaption>My coffee this morning</figcaption>
+      </figure>
+    </article>
   </body>
 </html>
