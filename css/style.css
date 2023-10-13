@@ -1,29 +1,31 @@
 body {
   margin: 10px;
 }
-
 #products {
-  border: 1px solid orange;
-  padding: 10px;
+  border: 1px solid black;
 }
 
-.product {
+#products p {
+  /* all childrean */
+  color: orange;
+}
+
+#comments {
+  border: 1px solid black;
+}
+
+#comments > p {
+  /* direct child */
   color: red;
 }
 
-a[target] {
-  background-color: pink;
+#comments + p {
+  /*only next p element immeditly after comments Or direct sibling  */
+  color: blue;
 }
 
-a[href='https://google.com']
-{
-  font-size: 20px;
-}
-
-a[href*="google"] {
-  margin: 10px;
-}
-
-a[href^="http"] [href$=".com"] {
+#comments ~ p {
+  /* all next p after comments Or general comments */
   font-weight: bold;
+  font-size: 20px;
 }
