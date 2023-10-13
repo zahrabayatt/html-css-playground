@@ -1,0 +1,29 @@
+body {
+  margin: 10px;
+}
+
+#products {
+  border: 1px solid orange;
+  padding: 10px;
+}
+
+.product {
+  color: red;
+}
+
+a[target] {
+  background-color: pink;
+}
+
+a[href='https://google.com']
+{
+  font-size: 20px;
+}
+
+a[href*="google"] {
+  margin: 10px;
+}
+
+a[href^="http"] [href$=".com"] {
+  font-weight: bold;
+}
