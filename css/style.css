@@ -1,11 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 20px;
 }
 
-p {
-  padding: 10px 20px; /* trbl or t(rl)b or vh*/
-  margin: 20px;
-  border: 5px solid gold;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  padding: 20px;
+  border: 10px solid orange;
 }
 
-/* padding doesn't collapse but margin does collapse*/
+.section {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  /* solve the problem that inline element doesn't take width and height */
+  display: inline-block;
+}
