@@ -2,18 +2,10 @@ body {
   margin: 20px;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background: orange;
-  /* box-shadow: 10px -10px grey; */
-  /* box-shadow: 10px 10px grey; */
-  /* box-shadow: -10px -10px 10px grey; */
-  box-shadow: 0 0 30px grey;
+p {
+  padding: 10px 20px; /* trbl or t(rl)b or vh*/
+  margin: 20px;
+  border: 5px solid gold;
 }
 
-h1 {
-  color: white;
-  /* text-shadow: 3px 3px 5px grey; */
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-}
+/* padding doesn't collapse but margin does collapse*/
