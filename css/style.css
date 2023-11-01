@@ -6,65 +6,49 @@
 
 body {
   margin: 10px;
-  height: 200vh;
 }
 
-/*By default, the position value for all elements is 'static,' which means they are not repositioned and appear in their normal layout position. */
-
-.boxes {
+.tweet {
   border: 3px solid lightgrey;
-  /* position: relative; */
-  /* To position an element relative to its container, you should set the container's position to 'relative' and the element's position to 'absolute'. */
+  overflow: hidden;
 }
 
-.box {
+/* .tweet::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ad::after {
+  content: "";
+  display: block;
+  clear: both;
+} */
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.avatar {
   width: 5rem;
   height: 5rem;
-}
-
-.box-one {
   background-color: gold;
+  float: left; /*or float: right; */
+  /* 
+  The parent element doesn't recognize floated elements. If you delete the second paragraph element, the border will only encompass the first paragraph element, not the avatar element. 
+
+  To fix this problem, you can add an empty <div> element with a 'clear' class at the end of the parent element
+  
+  but this is not a good approach because it is not readable for search index
+  
+  the another approach is using pseudo elements
+  
+  the third approach is using overflow attribute but it is dirty solution */
+  margin-right: 0.5rem;
 }
 
-.box-two {
-  background-color: tomato;
-
-  /* position relative  */
-  /* position: relative; */
-  /* position element relative to its normal position */
-  /* we can use negative values*/
-  /* left: 4rem; */
-  /* right: -4rem; */
-  /* top: 4rem; */
-  /* bottom: 4rem; */
-  /* z-index: -1; */
-  /* ------------------------------------ */
-
-  /* position absolute or position to the relative container */
-  /* position: absolute;
-  right: 0;
-  bottom: 0; */
-  /* ------------------------------------ */
-
-  /* position fixed or position to the view port */
-  position: fixed;
-  top: 0;
-  left: 2rem;
-  right: 2rem;
-  width: auto;
+.clear {
+  clear: both; /* right or left or both */
 }
-
-.box-three {
-  background-color: dodgerblue;
-}
-
-/* 
-Recap Positioning:
-
-1)Relative: relative to the element's normal position
-
-2)Absolute: relative to the parent 
-
-3)Fixed: relative to the view port
-
-*/
