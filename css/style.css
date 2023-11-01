@@ -1,3 +1,9 @@
+/* html { */
+/* 62.5% of 16px = 10px 
+  set the default font size of root element to 10px  */
+/* font-size: 62.5%; */
+/* } */
+
 *,
 *::before,
 *::after {
@@ -6,12 +12,33 @@
 
 body {
   margin: 20px;
+  /*Since the body element is a block-level element, its default width is set to 100% of the page, causing it to occupy all available horizontal space. */
+
+  /*Because the body element is a block-level element, its default height is initially set to zero. However, due to the presence of a box element with a height of 100% and a border height of 3px, the effective height of the body element becomes 3px. */
 }
 
 .box {
-  border: 3px solid gold;
-  width: 150px;
-  height: 150px;
-  /* the 'scroll' value always displays a scroll bar, regardless of whether the content overflows or not. However, the 'auto' value will only show a scroll bar when overflow occurs */
-  overflow: hidden auto;
+  /* width: 100px; */
+
+  /* width: 50%;  */
+  /* 50% of the width of the parent element which is body element */
+
+  /* width: 50vw; */
+
+  /* width: 10em; */
+  /* 10 x font size of the current element = 10 x 16px = 160px
+  Because this element doesn't have a specified font size value, it inherits the font size from its parent element, which is the 'body' element. By default, the browser assigns a font size of 16px to the 'body' element. */
+
+  width: 10rem;
+  /* 10 x font size of the root element = 10 * 16px = 160px 
+  The layout remains responsive even when users change the font size in their browser.
+  */
+
+  /* height: 100px; */
+
+  /* height: 100%; */
+
+  height: 100vh;
+  background-color: gold;
+  border-top: 3px solid orange;
 }
