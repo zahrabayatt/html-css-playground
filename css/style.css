@@ -1,33 +1,33 @@
 body {
   margin: 20px;
-  background-image: url("/images/image.png");
 }
+
 div {
   width: 200px;
   height: 100px;
   margin-bottom: 5px;
 }
 
-/* RGB */
 .box {
-  /* background-color: rgb(230, 205, 16);  */
-  background-color: rgba(230, 205, 16, 0.5);
+  /* use background or background-image for gradients */
+  /* background: linear-gradient(dodgerblue, yellow); */
+  /* background: linear-gradient(to right, dodgerblue, yellow); */
+  /* background: linear-gradient(to bottom right, dodgerblue, yellow); */
+  /* background: linear-gradient(45deg, dodgerblue, yellow); */
+  /* background: linear-gradient(45deg, dodgerblue, yellow 30%); */
+  background: linear-gradient(45deg, dodgerblue, yellow, orange);
 }
 
-/* Hexadecimal */
 .product {
-  background-color: #e6cd10;
-  /* we can't use alpha(transparenty) feature with hexadecimal value  */
+  height: 200px;
+  background: radial-gradient(white, yellow);
 }
 
-/* HSL */
 .comment {
-  /* background-color: hsl(53, 65%,77%); */
-  /* background-color: hsl(53deg 93% 51%); */
-  background-color: hsla(53, 65%, 77%, 0.5);
+  /* background: radial-gradient(white, yellow); */
+  /* background: radial-gradient(circle, white, yellow); */
+  background: radial-gradient(circle at top left, white, yellow);
 }
 
-/* Named colors */
-.section {
-  background-color: yellow;
-}
+/* online gradient generate tools: 
+https://cssgradient.io/ */
