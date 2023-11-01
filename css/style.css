@@ -2,39 +2,12 @@ body {
   margin: 20px;
 }
 
-/* 
-Selector Specificty
-  1)ID selector (#products)
-  2)Class & attribute selectors (.products)
-  3)Element selector (section) 
-*/
-
-/*
-usage of important is a bad practice instand of that you can define your specefic selctor 
-
-h1 {
-  color: dodgerblue !important;
-}
- */
-
-h1{
+p{
   color: dodgerblue;
+  border: 1px solid black;
 }
 
-.highlight {
-  color: deeppink;
+strong{
+  color: initial;
+  border: inherit;
 }
-
-#products {
-  color: green;
-}
-
-/* #products.highlight or
-.highlight#products or 
-h1.highlight#products or
-.featured #products
-*/
-h1#products{
- color: dodgerblue;
-}
-
