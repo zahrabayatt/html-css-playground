@@ -1,26 +1,40 @@
 body {
-  margin: 10px;
+  margin: 20px;
 }
 
-p::first-letter {
-  font-size: 140%;
-  font-wight: bold;
+/* 
+Selector Specificty
+  1)ID selector (#products)
+  2)Class & attribute selectors (.products)
+  3)Element selector (section) 
+*/
+
+/*
+usage of important is a bad practice instand of that you can define your specefic selctor 
+
+h1 {
+  color: dodgerblue !important;
+}
+ */
+
+h1{
+  color: dodgerblue;
 }
 
-p::first-line {
-  font-weight: bold;
+.highlight {
+  color: deeppink;
 }
 
-/* ::selecton apply to all element */
-p::selection {
-  background-color: pink;
+#products {
+  color: green;
 }
 
-p::before {
-  content: "...";
+/* #products.highlight or
+.highlight#products or 
+h1.highlight#products or
+.featured #products
+*/
+h1#products{
+ color: dodgerblue;
 }
 
-p::after {
-  content: "...";
-  display: block;
-}
