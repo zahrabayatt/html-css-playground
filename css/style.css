@@ -2,45 +2,25 @@ body {
   margin: 10px;
 }
 
-article :first-child {
+p::first-letter {
   font-size: 140%;
-  font-style: italic;
+  font-wight: bold;
 }
 
-article :first-of-type {
-  color: red;
+p::first-line {
+  font-weight: bold;
 }
 
-article p:first-of-type {
-  background-color: blue;
+/* ::selecton apply to all element */
+p::selection {
+  background-color: pink;
 }
 
-article p:last-of-type {
-  color: brown;
+p::before {
+  content: "...";
 }
 
-article :last-child {
-  color: pink;
-}
-
-a:visited,
-a:link {
-  font-size: 150%;
-}
-
-a:hover,
-a:focus {
-  color: blue;
-}
-
-ul li:nth-child(odd) {
-  color: deeppink;
-}
-
-ul li:nth-child(even) {
-  color: lightpink;
-}
-
-ul li:nth-child(3) {
-  font-size: 120%;
+p::after {
+  content: "...";
+  display: block;
 }
