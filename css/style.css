@@ -2,32 +2,18 @@ body {
   margin: 20px;
 }
 
-div {
-  width: 200px;
-  height: 100px;
-  margin-bottom: 5px;
-}
-
 .box {
-  /* use background or background-image for gradients */
-  /* background: linear-gradient(dodgerblue, yellow); */
-  /* background: linear-gradient(to right, dodgerblue, yellow); */
-  /* background: linear-gradient(to bottom right, dodgerblue, yellow); */
-  /* background: linear-gradient(45deg, dodgerblue, yellow); */
-  /* background: linear-gradient(45deg, dodgerblue, yellow 30%); */
-  background: linear-gradient(45deg, dodgerblue, yellow, orange);
-}
-
-.product {
+  width: 200px;
   height: 200px;
-  background: radial-gradient(white, yellow);
+  background: orange;
+  /* box-shadow: 10px -10px grey; */
+  /* box-shadow: 10px 10px grey; */
+  /* box-shadow: -10px -10px 10px grey; */
+  box-shadow: 0 0 30px grey;
 }
 
-.comment {
-  /* background: radial-gradient(white, yellow); */
-  /* background: radial-gradient(circle, white, yellow); */
-  background: radial-gradient(circle at top left, white, yellow);
+h1 {
+  color: white;
+  /* text-shadow: 3px 3px 5px grey; */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* online gradient generate tools: 
-https://cssgradient.io/ */
