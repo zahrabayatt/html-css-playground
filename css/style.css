@@ -1,13 +1,33 @@
 body {
   margin: 20px;
+  background-image: url("/images/image.png");
+}
+div {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 5px;
 }
 
-p{
-  color: dodgerblue;
-  border: 1px solid black;
+/* RGB */
+.box {
+  /* background-color: rgb(230, 205, 16);  */
+  background-color: rgba(230, 205, 16, 0.5);
 }
 
-strong{
-  color: initial;
-  border: inherit;
+/* Hexadecimal */
+.product {
+  background-color: #e6cd10;
+  /* we can't use alpha(transparenty) feature with hexadecimal value  */
+}
+
+/* HSL */
+.comment {
+  /* background-color: hsl(53, 65%,77%); */
+  /* background-color: hsl(53deg 93% 51%); */
+  background-color: hsla(53, 65%, 77%, 0.5);
+}
+
+/* Named colors */
+.section {
+  background-color: yellow;
 }
