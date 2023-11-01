@@ -1,9 +1,3 @@
-/* html { */
-/* 62.5% of 16px = 10px 
-  set the default font size of root element to 10px  */
-/* font-size: 62.5%; */
-/* } */
-
 *,
 *::before,
 *::after {
@@ -11,34 +5,66 @@
 }
 
 body {
-  margin: 20px;
-  /*Since the body element is a block-level element, its default width is set to 100% of the page, causing it to occupy all available horizontal space. */
+  margin: 10px;
+  height: 200vh;
+}
 
-  /*Because the body element is a block-level element, its default height is initially set to zero. However, due to the presence of a box element with a height of 100% and a border height of 3px, the effective height of the body element becomes 3px. */
+/*By default, the position value for all elements is 'static,' which means they are not repositioned and appear in their normal layout position. */
+
+.boxes {
+  border: 3px solid lightgrey;
+  /* position: relative; */
+  /* To position an element relative to its container, you should set the container's position to 'relative' and the element's position to 'absolute'. */
 }
 
 .box {
-  /* width: 100px; */
-
-  /* width: 50%;  */
-  /* 50% of the width of the parent element which is body element */
-
-  /* width: 50vw; */
-
-  /* width: 10em; */
-  /* 10 x font size of the current element = 10 x 16px = 160px
-  Because this element doesn't have a specified font size value, it inherits the font size from its parent element, which is the 'body' element. By default, the browser assigns a font size of 16px to the 'body' element. */
-
-  width: 10rem;
-  /* 10 x font size of the root element = 10 * 16px = 160px 
-  The layout remains responsive even when users change the font size in their browser.
-  */
-
-  /* height: 100px; */
-
-  /* height: 100%; */
-
-  height: 100vh;
-  background-color: gold;
-  border-top: 3px solid orange;
+  width: 5rem;
+  height: 5rem;
 }
+
+.box-one {
+  background-color: gold;
+}
+
+.box-two {
+  background-color: tomato;
+
+  /* position relative  */
+  /* position: relative; */
+  /* position element relative to its normal position */
+  /* we can use negative values*/
+  /* left: 4rem; */
+  /* right: -4rem; */
+  /* top: 4rem; */
+  /* bottom: 4rem; */
+  /* z-index: -1; */
+  /* ------------------------------------ */
+
+  /* position absolute or position to the relative container */
+  /* position: absolute;
+  right: 0;
+  bottom: 0; */
+  /* ------------------------------------ */
+
+  /* position fixed or position to the view port */
+  position: fixed;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  width: auto;
+}
+
+.box-three {
+  background-color: dodgerblue;
+}
+
+/* 
+Recap Positioning:
+
+1)Relative: relative to the element's normal position
+
+2)Absolute: relative to the parent 
+
+3)Fixed: relative to the view port
+
+*/
