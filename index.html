@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Place the link to the Google font before the stylesheet since it needs to be loaded first before it can be used in the stylesheet. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- preconnect relation type tells the browser our page is going to stabiles with the provided domain and retrieves contents from that domain.  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@700&display=optional"
+      rel="stylesheet"
+    />
+    <!-- google services is going to serve fonts rule provided in above link
+    ** if you look up at href of above link you can see query string parameters after question mark that you can edit it for example set display to optional 
+    -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
