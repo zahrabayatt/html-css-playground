@@ -6,14 +6,23 @@
     url("fonts/open-sans/opensans-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: optional;
 }
 
+/* values of font-display: 
+   -auto: Let browsers decide how to display fonts; different browsers may behave differently.
+   -swap: Display the next safe font in the font stack while downloading the costume font, and switch to the costume font once it's downloaded.
+   -fallback: Display the fallback font while downloading the costume font, and switch to the costume font after it's downloaded.
+   - Blocked: This value prevents text from being displayed until the font has been downloaded. However, it's not recommended to use this value because if the font fails to download, the text will never be displayed.
+   - optional: similar to fallback but browser downloaded in background 
+*/
 @font-face {
   font-family: "opensnas";
   src: url("fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
     url("fonts/open-sans/opensans-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: optional;
 }
 
 *,
@@ -48,5 +57,8 @@ h1 {
   - EOT
   - WOFF     | more compressed and affiant so mostly used for web
   - WOFF 2.0 |
+  
+  Flash of Unstyled Text (FOUT): During the initial site load, if the user's connection is slow, they may see a font-safe style until the costume font downloads, causing a flash of unstyled text.
 
+  for handle FOUT problem, we can set font-display to 
   */
