@@ -1,3 +1,21 @@
+/*  this font face rule can be found in stylesheet.css */
+
+@font-face {
+  font-family: "opensans";
+  src: url("fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "opensnas";
+  src: url("fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/opensans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -6,32 +24,29 @@
 
 body {
   margin: 10px;
-  /* set font of the element, 
-  the value is called web safe font in this example because almost all machine support it */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "opensans", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  /* Times new roman font placed between coitions mark because it has spaces */
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-p {
-  /* set boldness of the font, bold = 700, normal= 400 */
-  font-weight: normal;
-  font-style: italic;
-  font-size: 1rem;
-  color: #333;
-}
+/* Web safe fonts:
+  - Arial
+  - Helvetica
+  - Georgia
+  - Times New Roman 
+  
+  Where to find font:
+  - https://fontsquirrel.com
+  - https://fonts.com
+  - https://myfonts.com
 
-/* In general we have three main category font: 
-  - Serif 
-    it's professional font used in magazine, newspapers. Eg. Georgia, Times New Roman.
-  - Sans-serif
-    it's more playful and modern font. Eg. Avenir, Arial, Futura, Helvetica, Roboto.
-  - Monospace
-    mono means one so monospace means one space and this fonts used for showing code.
+  Font formats:
+  - TTF
+  - OTF
+  - EOT
+  - WOFF     | more compressed and affiant so mostly used for web
+  - WOFF 2.0 |
 
-  FontStack consists of multiple fonts and browser checks if first font exist on client's mashie applies that and if not apply following font in FontStack.
-
-*/
+  */
