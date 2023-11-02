@@ -6,53 +6,32 @@
 
 body {
   margin: 10px;
+  /* set font of the element, 
+  the value is called web safe font in this example because almost all machine support it */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
+h1 {
+  /* Times new roman font placed between coitions mark because it has spaces */
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.box {
-  background-color: gold;
-  padding: 1rem;
+p {
+  /* set boldness of the font, bold = 700, normal= 400 */
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
 }
 
-.box:nth-of-type(2) {
-  background-color: dodgerblue;
-}
+/* In general we have three main category font: 
+  - Serif 
+    it's professional font used in magazine, newspapers. Eg. Georgia, Times New Roman.
+  - Sans-serif
+    it's more playful and modern font. Eg. Avenir, Arial, Futura, Helvetica, Roboto.
+  - Monospace
+    mono means one so monospace means one space and this fonts used for showing code.
 
-/* @media screen and (min-width: 600px) and (max-width: 900px) { */
-@media screen and (min-width: 600px) {
-  .container {
-    flex-direction: row;
-  }
-}
+  FontStack consists of multiple fonts and browser checks if first font exist on client's mashie applies that and if not apply following font in FontStack.
 
-@media screen and (min-width: 900px) {
-  .container {
-    flex-direction: row;
-  }
-  .box {
-    background-color: white;
-  }
-}
-
-@media print {
-  body {
-    font-size: 12pt;
-  }
-
-  .box {
-    padding: 0.5cm;
-  }
-}
-
-/* Media Queries: to provide different styles for different devices depending on their features. 
-
-  Responsive design approaches: 
-  - build desktop first and then adjust layout for tablet and mobile
-  - build mobile first and then adjust layout for tablet and desktop
-
-  @media media-type conditions
 */
