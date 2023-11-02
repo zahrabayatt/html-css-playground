@@ -8,84 +8,9 @@ body {
   margin: 10px;
 }
 
-.container {
-  display: grid;
-  height: 100vh;
-  /* 3 x 2 */
-  /* grid-template-rows: repeat(3, 100px); */
-  /* grid-template-columns: repeat(2, 100px); or 100px 100px */
-  /* grid-template: repeat(3, 100px) / 100px 30% 70%; */
-  /* !! If you use a percentage unit, the size of rows and columns is based on the container's size, and rows and columns may grow beyond the container's boundaries. */
-  grid-template: 100px auto 100px / 30fr 70fr;
-  grid-template-areas:
-    "header  header"
-    "sidebar main"
-    ".       footer";
-  border: 3px solid lightgrey;
-  /* justify-items: stretch; */
-  /* align-items: stretch; */
-  /* the default value of both top property is stretch */
-  /* justify-content: center;
-  align-content: center; */
-  /* row-gap: 10px; */
-  /* column-gap: 10px; */
-  gap: 10px;
+.first {
+  /* display: none; */
+  /* hide element as if it never wasn't in there */
+  visibility: hidden;
+  /* hide element but it still was in there  */
 }
-
-.box {
-  /* width: 5rem;
-  height: 5rem; */
-  background-color: gold;
-}
-
-.box-one {
-  /* grid-column: 2; place this item in column 2 and place following items from top left to bottom right*/
-  /* grid-column: 1 / span 2; */
-  /* 1 / -1 = 1 / 3 = -3 / -1 = -3 / 3 = 1 / span 2 */
-  /* we can specify from place of item base on line number which displaying in chrome dev tool, we expend the item in two column */
-  /* grid-row: 2 / 4; */
-  /* check how other items change */
-  /* grid-area: 1/1 / 1/3; */
-  /* start / end = (row / column) / (row / column) */
-  grid-area: header;
-}
-
-.box-two {
-  grid-area: sidebar;
-}
-
-.box-three {
-  grid-area: main;
-}
-
-.box-four {
-  grid-area: footer;
-}
-
-/* GRID: To lay out elements in both rows and columns. Eg. photo gallery
-
-  Defining a grid: 
-  - set display of confiner to grid
-  - define grid-template-rows 
-  - define grid-template-columns
-
-  Aligning items: 
-  - justify-items (along the horizontal axis)
-  - align-items (along the vertical axis)
-  - justify-content (align entire grid along the horizontal axis in container)
-  - align-content (align entire grid along the vesical axis in container)
-
-  Gap: 
-  - row-gap
-  - column-gap
-  - gap (combination of first two property)
-
-  Placing items base on rows and columns: 
-  -grid-row
-  -grid-column
-  -grid-area (short hand for grid-row and grid-column)
-
-  Placing items base on named area: 
-  - grid-template-area (set it in container to define areas )
-  - grid-area (set it in individual's items to assign area )
-*/
