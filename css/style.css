@@ -9,82 +9,83 @@ body {
 }
 
 .container {
+  display: grid;
+  height: 100vh;
+  /* 3 x 2 */
+  /* grid-template-rows: repeat(3, 100px); */
+  /* grid-template-columns: repeat(2, 100px); or 100px 100px */
+  /* grid-template: repeat(3, 100px) / 100px 30% 70%; */
+  /* !! If you use a percentage unit, the size of rows and columns is based on the container's size, and rows and columns may grow beyond the container's boundaries. */
+  grid-template: 100px auto 100px / 30fr 70fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    ".       footer";
   border: 3px solid lightgrey;
-  /* Because this element is a block-level element, the default height is set to be as tall as its children.*/
-  height: 90vh;
-  display: flex;
-  /* flex-direction: column; */
-  /* flex-direction places elements in row, column, reverse row, or reverse column directions */
-  justify-content: center;
-  /* flex-start (default value): align items in start of main axes.
-     flex-end: align items in end of main axes.
-     center: align items in center of main axes.
-     space-evenly: align items with equal space between them in main axes
-     space-between: first and last item push to the start and end of the  main axes and other items  are distributed with equal space between them.
-     space-around: There is space between the first item and the start of the axes, which is equal to the space between the last item and the end of the main axes. This space is half the space between each of the two other items.
-  */
-  align-items: center;
-  /* flex-start (default value): align items in start of cross axes.
-     flex-end: align items in end of cross axes.
-     center: align items in center of cross axes.
-     
-  */
-  /* flex-wrap: wrap; */
-  /* set how element wrap in cross axes:
-     - nowrap (default value)
-     - wrap 
-  */
-  /* align-content: center; */
+  /* justify-items: stretch; */
+  /* align-items: stretch; */
+  /* the default value of both top property is stretch */
+  /* justify-content: center;
+  align-content: center; */
+  /* row-gap: 10px; */
+  /* column-gap: 10px; */
+  gap: 10px;
 }
 
 .box {
-  width: 5rem;
-  height: 5rem;
-  background: gold;
-  margin: 1rem;
-  /* flex-basis: 15rem; */
-  /* -auto (default value): browser is going to look at width property and set item'width base on that and flex-basis is set the main axes.
-     - number 
-  */
-  /* flex-grow: 2; */ /* default value is 0 */
-  /* flex-shrink: 1; */ /* default value is 1 */
+  /* width: 5rem;
+  height: 5rem; */
+  background-color: gold;
 }
 
-/* .box-one { */
-/* flex-shrink: 0; */
-/* the value 0 in flex-shrink prevented of shrinking */
-/* flex-grow: 2; */
-/* align-self: flex-end; */
-/* flex-basis: 5rem; */
-/* } */
+.box-one {
+  /* grid-column: 2; place this item in column 2 and place following items from top left to bottom right*/
+  /* grid-column: 1 / span 2; */
+  /* 1 / -1 = 1 / 3 = -3 / -1 = -3 / 3 = 1 / span 2 */
+  /* we can specify from place of item base on line number which displaying in chrome dev tool, we expend the item in two column */
+  /* grid-row: 2 / 4; */
+  /* check how other items change */
+  /* grid-area: 1/1 / 1/3; */
+  /* start / end = (row / column) / (row / column) */
+  grid-area: header;
+}
 
-/* Flexible Box Layout (FlexBox):
-    Used for laying out elements in one direction like column or row
+.box-two {
+  grid-area: sidebar;
+}
 
-  In flex we have two Axes which aligning items is working base on that: 
-    - Main (primary)
-    - Cross (secondary)
-  these axes depends on flex direction: 
-    - if flex direction is row, the main axes is going to be horizontal axes and the cross axes is going to be vertical axes.
-    - if flex direction is column, the main axes is going to be vertical axes and the cross axes is going to be horizontal axes.
+.box-three {
+  grid-area: main;
+}
 
-  Aligning items:
-    - justify-content (along the main axis)
-    - align-item (along the cross axis)
-    - align-content (align entire content or items along the cross axis)
-    - align-self (alien self content or item along the cross axis)
+.box-four {
+  grid-area: footer;
+}
 
-  Sizing items (should be applied on flex item not flex container): 
-    - flex-basis (the initial size of a flex item, size of main axis in
-      item)
-    - flex-grow (the growth factor: allow items to grow and take up 
-      available free space in main axis)
-      **how it works? if we set flex grow for two item 1 and for third item to 2, browser takes free space and divided by 4 part and give the parts base on flex grow for each two item gives 1 part and for last one gives 2 parts.
-    - flex-shrink (the shrink factor, set how element should be shrunk if
-      there is not enough free spaces)
-      !! flex-shrink and flex-grow take numbers not units.
-    - flex (short hand property for combing all top three property)
-          - single value: flex-grow
-          - two values: flex-grow | flex-shrink or flex-basis
-          - three values: flex-grow | flex-shrink | flex-basis
+/* GRID: To lay out elements in both rows and columns. Eg. photo gallery
+
+  Defining a grid: 
+  - set display of confiner to grid
+  - define grid-template-rows 
+  - define grid-template-columns
+
+  Aligning items: 
+  - justify-items (along the horizontal axis)
+  - align-items (along the vertical axis)
+  - justify-content (align entire grid along the horizontal axis in container)
+  - align-content (align entire grid along the vesical axis in container)
+
+  Gap: 
+  - row-gap
+  - column-gap
+  - gap (combination of first two property)
+
+  Placing items base on rows and columns: 
+  -grid-row
+  -grid-column
+  -grid-area (short hand for grid-row and grid-column)
+
+  Placing items base on named area: 
+  - grid-template-area (set it in container to define areas )
+  - grid-area (set it in individual's items to assign area )
 */
