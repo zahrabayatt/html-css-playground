@@ -3,34 +3,64 @@ html {
 }
 
 body {
-  margin: 1rem;
+  font-family: "Source Sans 3", sans-serif;
+  padding: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #222;
 }
 
-.gallery {
-  display: grid;
-  grid-gap: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: #000;
+  font-weight: 900;
+  line-height: 1.1;
 }
 
-.gallery img {
+h1 {
+  font-size: 5.61rem;
+}
+
+h2 {
+  font-size: 4.209rem;
+}
+
+h3 {
+  font-size: 3.157rem;
+}
+
+h4 {
+  font-size: 2.369rem;
+}
+
+h5 {
+  font-size: 1.777rem;
+}
+
+h6 {
+  font-size: 1.333rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 0.5rem;
 }
 
-@media screen and (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
+ol li {
+  margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery img:nth-of-type(3) {
-    grid-row: 1 / 3;
-    grid-column: 2 / 4;
-  }
+.lead {
+  font-family: "PT Serif", "Times New Roman", Times, serif;
+  font-size: 2.5rem;
 }
