@@ -1,21 +1,18 @@
-/* Data urls: 
-  Formerly: Data Urls
+.recipe {
+  width: 400px;
+  height: 200px;
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
 
-  Another optimization technique to reduce HTTP requests, this technique embedded images to html document or stylesheets.
+/* 
+css clip generator: https://bennettfeely.com/clippy/
 
-  Data url generator: 
-  https://www.cssportal.com/image-to-data/
-
-  upload image and copy data url.
-
-
-  Data url format --> data-portal:image/image-type;data
-  **data is a portal which is representative binary file in sequence characters
-
-  with data url we can reduce http request.
-
-  Problems: 
-  - Size of embedded code > size of the resource
-  - Increased complexity
-  - Slow on mobile
 */
