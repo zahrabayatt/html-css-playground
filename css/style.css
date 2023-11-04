@@ -1,26 +1,27 @@
-.recipe {
-  width: 450px;
-  height: 300px;
-}
-
-.recipe:hover {
-  filter: grayscale(70%) blur(3px);
+.meal {
+  width: 400px;
 }
 
 /* 
-  css Filters: 
-    - grayscale
-    - blur
-    - contrast
-    - brightness
-    - saturate
-  
-  PSEUDO-CLASS SELECTORS: 
-  To select an element in a particular class (state)
-    - :hover
-    - :active
-    - :visited
+Physical resolution: which is base on the actual number of pixel on the device Eg. iphone4 960 x 640
 
-  more about css filter functions: 
-  https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+Logical resolution: which is how pixel behave on the device Eg. iphone4 480 x 320 (every two physical pixel is present one pixel of image)
+
+Device Pixel Ratio (DPR): physical resolution / logical resolution. Eg. iphone4 = 960 x 640 / 480 x 320 = 2
+
+High Density screen is screen that the DPR of them is grater than one. (DPR > 1)
+
+we can resize our images for different DPRs Eg. 1x, 2x, 3x,... to show images in good quality
+
+to resize image for different DPRs we can use potshot and for resizing always start with large images in other wise we ended up with blur images.
+3x = 1200 x 1200 = 4K x 4K
+2x = 800 x 800 
+x = 400 x 400
+
+** in Jpeg option in potshot set quality to 7.
+
+we can use srcset attribute to set different src for different DPRs.
+
+!!!we only set different source set for images we want to sharp in different DPRs.
+
 */
