@@ -1,22 +1,9 @@
-/* In computer we have two types of images: 
-   - Raster: which is made up pixel using for phots 
-        - come from cameras/scanners
-        -Formats: JPG, PNG, GIF, ets
-        - Look blurry if scaled up
-   - Vector: which define set of math mythical vectors like line, carves for simple graphic, icon, logos
-        - created in software(illustrator)
-        - Format: SVG
-        - Scalable Vector Graphics
-        - Look sharp at any size
+.recipe {
+  width: 100vw;
+  /* image looks blur because it scales up */
+}
 
-
-    RAster images formats: 
-         |Colors |  Transparency | Animation
-    JPEG    16M       
-    GIF     256        #               #
-    PNG     16M        #               # 
-    WebP    16M        #               #  (smallest size but not support in IE)
-
-    **most of time we use jpeg but if we need animation or transparency, we used pgn, gif, webp
-
+/* In html we have two types of images: 
+    - content images
+    - background images
 */
