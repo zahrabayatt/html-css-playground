@@ -8,11 +8,33 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- with this code we can provide images with 100vw for different DPR and resolution screen -->
+    <!-- <img
+      src="images/meal.jpg"
+      alt="A bowl of salmon and curry"
+      class="meal"
+      srcset="
+        images/meal.jpg     400w,
+        images/meal@2x.jpg  800w,
+        images/meal@3x.jpg 1200w
+      "
+    /> -->
+
+    <!-- if we want show images width different relative sizes in different DPR and resolution screen -->
     <img
       src="images/meal.jpg"
       alt="A bowl of salmon and curry"
       class="meal"
-      srcset="images/meal.jpg 1x, images/meal@2x.jpg 2x, images/meal@3x.jpg 3x"
+      srcset="
+        images/meal.jpg     400w,
+        images/meal@2x.jpg  800w,
+        images/meal@3x.jpg 1200w
+      "
+      sizes="
+      (max-width: 500px) 100vw,
+      (max-width: 700px) 50vw,
+      32vw"
     />
+    <!-- 32vw applied on other cases -->
   </body>
 </html>
