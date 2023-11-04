@@ -1,18 +1,26 @@
 .recipe {
-  width: 400px;
-  height: 200px;
-  clip-path: polygon(
-    0% 20%,
-    60% 20%,
-    60% 0%,
-    100% 50%,
-    60% 100%,
-    60% 80%,
-    0% 80%
-  );
+  width: 450px;
+  height: 300px;
+}
+
+.recipe:hover {
+  filter: grayscale(70%) blur(3px);
 }
 
 /* 
-css clip generator: https://bennettfeely.com/clippy/
+  css Filters: 
+    - grayscale
+    - blur
+    - contrast
+    - brightness
+    - saturate
+  
+  PSEUDO-CLASS SELECTORS: 
+  To select an element in a particular class (state)
+    - :hover
+    - :active
+    - :visited
 
+  more about css filter functions: 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/filter
 */
