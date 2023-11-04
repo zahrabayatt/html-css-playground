@@ -1,32 +1,46 @@
-body {
-  /* we can use background or background-image */
-  background: url(../images/recipe.jpg);
-  background-repeat: no-repeat;
-  /* repeat-x: repeat horizontal
-     repeat-y: repeat vertical 
-     repeat: repeat horizontal and vertical
-  */
-  /* background-size: 300px 200px; */
-  /* background-size: 100% 400px; */
-  /* background-size: 100% 100%; */
-  /*body's hight is tall as its children by default because it is block level elements, in this case it is 0 because doesn't have any children. */
-
-  /* height: 100vh;
-  background-size: 100% 100%; */
-
-  /* height: 100vh;
-  background-size: cover; */
-
-  /* resize image while keep aspect ratio */
-  /* background-position: 100% 100px; */
-  /* background-position: 100px 100px; */
-  /* first value: like right position, positive value = right, negative value = left
-     second value: like top position, positive value = bottom, negative value = top
-  */
-
-  height: 300vh;
-  background-size: cover;
-
-  background-attachment: fixed;
-  /* make background fixed relative to view port */
+.bg-3d-rocket {
+  background: url("../images/css-sprite-combined.png") 0px -0px;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
 }
+
+.bg-parachute {
+  background: url("../images/css-sprite-combined.png") -128px -0px;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+}
+
+.bg-satellite-dish {
+  background: url("../images/css-sprite-combined.png") -256px -0px;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+}
+
+.bg-saturn {
+  background: url("../images/css-sprite-combined.png") -384px -0px;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+}
+
+.bg-ufo {
+  background: url("../images/css-sprite-combined.png") -512px -0px;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+}
+
+/* 
+  Get icons: https://www.flaticon.com/
+
+  combine images using : https://cssspritestool.com/
+    1-add combine image to project: css-sprite-combined.png
+    2-add css code from css-sprite-code-package
+
+  Problems css sprite combine: 
+    - File size can get too large
+    - Sprites are not flexible
+*/
