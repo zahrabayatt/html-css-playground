@@ -1,46 +1,21 @@
-.bg-3d-rocket {
-  background: url("../images/css-sprite-combined.png") 0px -0px;
-  width: 128px;
-  height: 128px;
-  display: inline-block;
-}
+/* Data urls: 
+  Formerly: Data Urls
 
-.bg-parachute {
-  background: url("../images/css-sprite-combined.png") -128px -0px;
-  width: 128px;
-  height: 128px;
-  display: inline-block;
-}
+  Another optimization technique to reduce HTTP requests, this technique embedded images to html document or stylesheets.
 
-.bg-satellite-dish {
-  background: url("../images/css-sprite-combined.png") -256px -0px;
-  width: 128px;
-  height: 128px;
-  display: inline-block;
-}
+  Data url generator: 
+  https://www.cssportal.com/image-to-data/
 
-.bg-saturn {
-  background: url("../images/css-sprite-combined.png") -384px -0px;
-  width: 128px;
-  height: 128px;
-  display: inline-block;
-}
+  upload image and copy data url.
 
-.bg-ufo {
-  background: url("../images/css-sprite-combined.png") -512px -0px;
-  width: 128px;
-  height: 128px;
-  display: inline-block;
-}
 
-/* 
-  Get icons: https://www.flaticon.com/
+  Data url format --> data-portal:image/image-type;data
+  **data is a portal which is representative binary file in sequence characters
 
-  combine images using : https://cssspritestool.com/
-    1-add combine image to project: css-sprite-combined.png
-    2-add css code from css-sprite-code-package
+  with data url we can reduce http request.
 
-  Problems css sprite combine: 
-    - File size can get too large
-    - Sprites are not flexible
+  Problems: 
+  - Size of embedded code > size of the resource
+  - Increased complexity
+  - Slow on mobile
 */
