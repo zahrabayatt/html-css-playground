@@ -1,19 +1,10 @@
-/* .meal {
-  width: 100vw;
-} */
-
 /* 
-sometimes we want provide different images for different resolutions like tablet, mobile, desktop,... this problem is called resolution switching. 
+Conversion to webp: 
+- Photoshop(WebPshop Plug-in)
+- Sketch
+- Online tools (https://cloudconvert.com/jpg-to-webp)
+- Command-line tools
 
-devices can have same DPR but different resolutions.
-for example: Retina Displays
-                    |  resolution   |   DPR
-    iphone 8            667 x 375        2
-    ipad pro 11"       1024 x 768        2 
-    MacBook pro 15"    1440 x 900        2 
-
-
-**if image is going to be show in exact size (width or hight) we don't have any resolution switching problem.
-
-responsive breakpoint generator for generate in different breakpoint setting: https://www.responsivebreakpoints.com/
+**webp images are lots smaller than other formats.
+**90% of browsers support webp images expect IE browser.
 */
