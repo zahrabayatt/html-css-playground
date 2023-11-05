@@ -1,4 +1,19 @@
-/* 
-We can set different images for various screen sizes, for instance, a cropped and zoomed image for mobile devices and a full-sized image for desktop screens.
+body {
+  background: url(../images/endless-constellation.svg);
+}
 
+.ufo {
+  width: 100px;
+}
+
+/* 
+Vector images: 
+- Created in software (illstrator)
+- Format: SVG
+- Scalable Vector Graphics
+- look sharp at any size
+
+get svg backgrounds: https://svgbackgrounds.com
+
+use vector images for logos, icons, simple graphic, background
 */
