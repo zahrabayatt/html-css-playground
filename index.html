@@ -13,26 +13,13 @@
   </head>
   <body>
     <form>
-      <h2>Input types:</h2>
-      <input type="text" />
-      <input type="number" />
-      <input type="password" />
-      <input type="date" />
-      <input type="email" />
-      <textarea cols="30" rows="10"></textarea>
-      <h2>Input attributes:</h2>
-      <input type="text" value="Hello" />
-      <input type="text" readonly value="you can't change this" />
-      <input type="text" placeholder="Hey..." />
-      <input
-        type="text"
-        disabled
-        value="you can't select this and change it and also doesn't send to server"
-      />
-      <input type="text" maxlength="5" />
-      <input type="text" autofocus />
-      <!-- <textarea value="Hiiiiiii"></textarea> it is not correct -->
-      <textarea>Hiiiiiiiiii</textarea>
+      <input type="text" list="countries" autocomplete="off" />
+      <datalist id="countries">
+        <option value="1">Australia</option>
+        <option data-value="2">Canada</option>
+        <option>India</option>
+        <option>United States</option>
+      </datalist>
     </form>
   </body>
 </html>

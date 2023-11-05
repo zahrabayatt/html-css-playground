@@ -1,23 +1,12 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
 form {
   width: 50%;
   padding: 2rem;
 }
-
-/* textarea {
-  resize: none;
-} */
-
 /* 
-Get more about input html elements: 
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+datalist markup doesn't exist in vs code intellisense.
 
+we can use datalist for showing suggestion menu.
+
+every browser applied own style on datalist for applying custom style you can use this workaround: 
+https://dev.to/siddev/customise-datalist-45p0
 */
