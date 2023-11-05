@@ -13,13 +13,35 @@
   </head>
   <body>
     <form>
-      <input type="text" list="countries" autocomplete="off" />
-      <datalist id="countries">
-        <option value="1">Australia</option>
-        <option data-value="2">Canada</option>
-        <option>India</option>
-        <option>United States</option>
-      </datalist>
+      <select>
+        <option value="">Select the option...</option>
+        <option value="1">option 1</option>
+        <option value="2">option 2</option>
+        <option value="3">option 3</option>
+      </select>
+      <select>
+        <option value="">Select the option...</option>
+        <option value="1" selected>option 1</option>
+        <option value="2">option 2</option>
+        <option value="3">option 3</option>
+      </select>
+      <select multiple>
+        <option value="1">option 1</option>
+        <option value="2">option 2</option>
+        <option value="3">option 3</option>
+      </select>
+      <select>
+        <optgroup label="Back-End Courses">
+          <option value="1">Django</option>
+          <option value="2">Asp.net</option>
+          <option value="3">Node.js</option>
+        </optgroup>
+        <optgroup label="Front-End Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JS</option>
+        </optgroup>
+      </select>
     </form>
   </body>
 </html>
