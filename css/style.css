@@ -1,16 +1,81 @@
-.icon {
-  font-size: 2rem;
-  color: dodgerblue;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-/* 
-we have another way to displaying icons, it is icon fonts.
+html {
+  font-size: 62.5%;
+}
 
-these icon fonts are special fonts and instant of letter and number, these are icons.
+body {
+  font-family: "Poppins", sans-serif;
+}
 
-Icon fonts: 
-- font awesome : https://fontawesome.com
-- Ionicons
-- Material Design icons
+.banner {
+  height: 100vh;
+  background: url(../images/background_w800.jpg) no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-*/
+.banner h1 {
+  font-weight: 900;
+  text-shadow: 2px 2px 0 #000;
+  text-transform: uppercase;
+  font-size: 5rem;
+  word-spacing: 1.5rem;
+}
+
+.banner .tagline {
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 319px) {
+  .banner h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background: url(../images/background_w928.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .banner .tagline {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    background: url(../images/background_w1272.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .banner h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .banner {
+    background: url(../images/background_w1440.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .banner h1 {
+    font-size: 9rem;
+  }
+}
