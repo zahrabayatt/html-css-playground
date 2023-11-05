@@ -1,19 +1,16 @@
-body {
-  background: url(../images/endless-constellation.svg);
-}
-
-.ufo {
-  width: 100px;
+.icon {
+  font-size: 2rem;
+  color: dodgerblue;
 }
 
 /* 
-Vector images: 
-- Created in software (illstrator)
-- Format: SVG
-- Scalable Vector Graphics
-- look sharp at any size
+we have another way to displaying icons, it is icon fonts.
 
-get svg backgrounds: https://svgbackgrounds.com
+these icon fonts are special fonts and instant of letter and number, these are icons.
 
-use vector images for logos, icons, simple graphic, background
+Icon fonts: 
+- font awesome : https://fontawesome.com
+- Ionicons
+- Material Design icons
+
 */
