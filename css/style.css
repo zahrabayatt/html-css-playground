@@ -7,16 +7,17 @@
 html {
   font-size: 62.5%;
 }
+form {
+  width: 50%;
+  padding: 2rem;
+}
+
+/* textarea {
+  resize: none;
+} */
 
 /* 
-- css frameworks: a frameworks essentially is a library of css code that we can use for building beautiful and modern website.
-- bootstrap
-- Foundation 
-- Semantic UI
-- UI kit
-- Materialize
-- Milligram
-
-CDN : content delivery network, they are essentiality a bunch of servers distributed around of world, these are optimized for delivering assets like images, css files, js files,... 
+Get more about input html elements: 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 
 */
