@@ -9,36 +9,30 @@
       src="https://kit.fontawesome.com/8603e64b37.js"
       crossorigin="anonymous"
     ></script>
-    <title>Menu</title>
+    <title>Document</title>
   </head>
   <body>
-    <section class="menu">
-      <ul>
-        <li>
-          <i class="fas fa-tachometer-alt"></i>
-          <a href="#">Dashboard</a>
-        </li>
-        <li class="active">
-          <i class="fas fa-user"></i>
-          <a href="#">Users</a>
-        </li>
-        <li>
-          <i class="fas fa-sitemap"></i>
-          <a href="#">Site</a>
-        </li>
-        <li>
-          <i class="fas fa-dollar-sign"></i>
-          <a href="#">Sales</a>
-        </li>
-        <li>
-          <i class="fas fa-envelope"></i>
-          <a href="#">Emails</a>
-        </li>
-        <li>
-          <i class="fas fa-cogs"></i>
-          <a href="#">Settings</a>
-        </li>
-      </ul>
-    </section>
+    <form>
+      <!-- this is not good solution -->
+      <!-- <p>Name</p>
+      <input type="text" /> -->
+      <!-- the 'for' attribute of label element assigns the value of id's input -->
+      <!-- label element is inline -->
+      <!-- <label for="name">Name</label>
+      <input id="name" type="text" />
+      <label for="email">Email</label>
+      <input id="email" type="email" /> -->
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </form>
   </body>
 </html>
