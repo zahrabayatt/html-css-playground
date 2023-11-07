@@ -13,8 +13,16 @@
   </head>
   <body>
     <form>
-      <input type="range" min="0" max="100" value="90" />
-      <!-- we can't not show value of slider with plain html and css we should use js -->
+      <!-- for choose a single file form any type-->
+      <input type="file" />
+      <!-- for choose a multiple file from any type -->
+      <input type="file" multiple />
+      <!-- for choose a specific type of file -->
+      <input type="file" accept=".jpg" />
+      <input type="file" accept=".jpg, .png" />
+      <input type="file" accept="image/*" />
+      <input type="file" accept="video/*" />
+      <input type="file" accept="audio/*" />
     </form>
   </body>
 </html>
