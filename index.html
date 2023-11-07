@@ -14,24 +14,24 @@
   <body>
     <form>
       <div>
-        <input type="checkbox" id="front-end" />
-        <label class="label-inline" for="front-end">Front-end</label>
+        <input type="radio" name="membership" id="silver" />
+        <label for="silver" class="label-inline">Silver</label>
       </div>
       <div>
-        <input type="checkbox" id="back-end" checked />
-        <label class="label-inline" for="back-end">Back-end</label>
-      </div>
-      <div>
-        <input type="checkbox" id="database" disabled />
-        <label class="label-inline" for="database">Database</label>
+        <input type="radio" name="membership" id="gold" />
+        <label for="gold" class="label-inline">Gold</label>
       </div>
     </form>
     <!-- 
+      - with check boxes users can select multi item selected, but if we want users only select one item we can use radio element or dropdown list element. 
+      
+      - with name attribute we can group multi radio element together. 
+
       - milligram make label block level element and we can use utility class in milligram to make label element a inline element.
 
-      - every input checkbox type element comes with a label which is have for attribute with value of id attribute of input element 
+      - every input radio type element comes with a label which is have for attribute with value of id attribute of radio element 
 
-      - if you click on label or checkbox element, the checkbox is going to be checked or unchecked. 
+      - if you click on label or radio element, the radio is going to be checked or unchecked. 
     -->
   </body>
 </html>
