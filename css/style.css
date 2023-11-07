@@ -15,28 +15,45 @@ body {
   height: 100vh;
 }
 
+/* with keyframes we can define a animation in different frame */
+@keyframes pop {
+  /* frames specify with percentage */
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: rotate(45deg);
+    background-color: tomato;
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .box {
   width: 100px;
   height: 100px;
   background-color: gold;
-  /* transition: transform 0.5s; */
-  /* transition: transform 0.5s ease-in; */
-  /* transition: transform 0.5s ease-out; */
-  /* transition: transform 0.5s ease-in-out; */
-  /* transition: transform 0.5s cubic-bezier(0.17, 0.67, 1, 0.36); */
-  /* 
-  - linear(default value): animation is going to be progress in linear rate
-  - ease-in: animation starts slowly and progress quakily
-  - ease-out: animation starts quakily and progress slowly
-  - we can specify custom carve using cubic-bezier() function. we can create custom cubic-bezier animation using this website: https://cubic-bezier.com
-  */
-  /* transition: transform 0.5s linear 1s; */
-  /* last value specifies after 1 seconde animation starts */
-
-  transition: transform 0.5s, background 0.5s;
+  animation-name: pop;
+  /* we must define duration for animation otherwise it doesn't work */
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: 1; /* default value*/
+  animation-iteration-count: 2;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: normal; /* default value */
+  animation-direction: reverse;
+  animation-direction: alternate; /*The animation cycle iterations that are odd counts are played in the normal direction, and the animation cycle iterations that are even counts are played in a reverse direction.*/
+  /* animation: pop 4s ease-out 1s; shorthand property for animation  */
 }
 
-.box:hover {
-  transform: rotate(45deg);
-  background-color: dodgerblue;
-}
+/* with transition we can animate elements but this technique use for really simple animations.
+   but fro complex animation we have to use animation property like applying multi transformation and control timing and speed of each transformation.
+*/
