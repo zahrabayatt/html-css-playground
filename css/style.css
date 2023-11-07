@@ -21,27 +21,54 @@ body {
   background-color: gold;
 }
 
-.box:hover {
-  transform: translate(0, 50px) rotate(45deg);
+/* .box:hover { */
+/* + value = closer to user, - value = farther from user*/
+/*first define perspective view which means the distance between user and element.*/
+/* transform: perspective(200px) translateZ(-50px); */
+
+/* transform: perspective(200px) rotateZ(45deg); */
+/* transform: perspective(200px) rotateY(45deg); */
+/* transform: perspective(200px) rotateX(45deg); */
+
+/* change transform origin, by default is center of element */
+/* transform-origin: x-offset y-offset */
+/* transform-origin: 0 0; top left corner of element */
+/* transform-origin: 0 50%; */
+/* } */
+/* ---------------------- */
+/* Apply animation to all elements : grab them in one container and apply animation to container */
+
+/* .container:hover {
+  transform: perspective(200px) rotateY(45deg);
+} */
+
+/* ----------------------------- */
+/* Apply animation to each element of container separately */
+/* .container:hover .box {
+  transform: perspective(200px) rotateY(45deg);
+} */
+
+/* ----------------------------- */
+/* make perspective of elements same in the container  */
+/* .container {
+  perspective: 200px;
 }
 
+.container:hover .box {
+  transform: rotateY(45deg);
+} */
+/* ------------------------------------------- */
+.container {
+  perspective: 200px;
+}
+
+.container:hover .box {
+  transform: rotateY(45deg);
+}
+.container:hover .box-two {
+  transform: rotateX(45deg);
+}
 /* 
-  - Transformations: 
-    move elements along the vertical or horizontal axes.
-  
-  - Transformations functions: 
-    - rotate() 
-      - positive value = rotate in clockwise direction,negative value = rotate in counterclockwise direction
-      - transform: rotate(15deg or -15deg);
-    - scale(): Make it large or smaller
-      - transform: scale(1.5 or .5 or -1.5);
-    - skew(): teltiem it to right or left
-      - transform: skew(-15deg or 15deg) 
-    - translate: positioning it on the screen
-      - transform: translate(x,y) like translate(10px or 10px,10px or 0,10px)
-      - transform: translateX(10px)
-      - transform: translateY(10px)
-
-    **we can combine transformation function
-
+  - 3D Transformations: 
+    move elements along the z axes. 
 */
