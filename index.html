@@ -13,25 +13,8 @@
   </head>
   <body>
     <form>
-      <div>
-        <input type="radio" name="membership" id="silver" />
-        <label for="silver" class="label-inline">Silver</label>
-      </div>
-      <div>
-        <input type="radio" name="membership" id="gold" />
-        <label for="gold" class="label-inline">Gold</label>
-      </div>
+      <input type="range" min="0" max="100" value="90" />
+      <!-- we can't not show value of slider with plain html and css we should use js -->
     </form>
-    <!-- 
-      - with check boxes users can select multi item selected, but if we want users only select one item we can use radio element or dropdown list element. 
-      
-      - with name attribute we can group multi radio element together. 
-
-      - milligram make label block level element and we can use utility class in milligram to make label element a inline element.
-
-      - every input radio type element comes with a label which is have for attribute with value of id attribute of radio element 
-
-      - if you click on label or radio element, the radio is going to be checked or unchecked. 
-    -->
   </body>
 </html>
