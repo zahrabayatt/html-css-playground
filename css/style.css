@@ -9,58 +9,34 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #f5f5f5;
-  font-size: 1.6rem;
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.form-signin {
-  max-width: 300px;
-  text-align: center;
-  width: 100%;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
 }
 
-.form-control {
-  outline: 0;
-  border: 1px solid #ced4ce;
-  border-radius: 5px;
-  transition: border-color 0.15s, box-shadow 0.15s;
+.box:hover {
+  transform: translate(0, 50px) rotate(45deg);
 }
 
-.form-control:focus {
-  border-color: #86b7fe;
-  box-shadow: 0 0 0 2px #b9d3fa;
-  border-radius: 5px;
-}
+/* 
+  - Transformations: 
+    - rotate() 
+      - positive value = rotate in clockwise direction,negative value = rotate in counterclockwise direction
+      - transform: rotate(15deg or -15deg);
+    - scale(): Make it large or smaller
+      - transform: scale(1.5 or .5 or -1.5);
+    - skew(): teltiem it to right or left
+      - transform: skew(-15deg or 15deg) 
+    - translate: positioning it on the screen
+      - transform: translate(x,y) like translate(10px or 10px,10px or 0,10px)
 
-.form-control,
-.btn {
-  width: 100%;
-  padding: 1.5rem;
-}
+    **we can combine transformation function
 
-.btn {
-  background-color: #0d6efd;
-  border: 0;
-  outline: 0;
-  border-radius: 30px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #0759d3;
-}
-
-.form-group {
-  margin: 1rem 0;
-}
-
-.muted {
-  color: #6c757d;
-}
+*/
