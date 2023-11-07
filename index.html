@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
-    />
     <title>Document</title>
   </head>
   <body>
-    <form action="https://formspree.io/f/myybnlqn" method="post">
-      <input type="text" placeholder="Name" name="name" />
-      <input type="text" placeholder="Email" name="email" />
-      <button type="submit">submit</button>
-
-      <!-- <input type="submit" value="submit" /> this is not good approach for submit button and we can't use icon for the submit button. -->
-      <!-- <button type="submit">
-        <i class="fas fa-alert"></i>
-        submit
-      </button> -->
+    <form class="form-signin">
+      <h1>Please sign in</h1>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Email address"
+          autofocus
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Password"
+          maxlength="255"
+        />
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="checkbox" id="remember-me" />
+        <label for="remember-me">Remember me</label>
+      </div>
+      <button type="submit" class="btn">Sign in</button>
+      <p class="muted">Copyright &copy; 2023</p>
     </form>
-
-    <!-- 
-      - attribute for submitting the form:
-        - action: relative or absolute url 
-        - method : post or get
-        - name
-
-      mock server for forms: https://formspree.io
-
-     -->
   </body>
 </html>
