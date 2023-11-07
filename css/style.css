@@ -27,6 +27,9 @@ body {
 
 /* 
   - Transformations: 
+    move elements along the vertical or horizontal axes.
+  
+  - Transformations functions: 
     - rotate() 
       - positive value = rotate in clockwise direction,negative value = rotate in counterclockwise direction
       - transform: rotate(15deg or -15deg);
@@ -36,6 +39,8 @@ body {
       - transform: skew(-15deg or 15deg) 
     - translate: positioning it on the screen
       - transform: translate(x,y) like translate(10px or 10px,10px or 0,10px)
+      - transform: translateX(10px)
+      - transform: translateY(10px)
 
     **we can combine transformation function
 
