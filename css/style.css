@@ -19,56 +19,24 @@ body {
   width: 100px;
   height: 100px;
   background-color: gold;
+  /* transition: transform 0.5s; */
+  /* transition: transform 0.5s ease-in; */
+  /* transition: transform 0.5s ease-out; */
+  /* transition: transform 0.5s ease-in-out; */
+  /* transition: transform 0.5s cubic-bezier(0.17, 0.67, 1, 0.36); */
+  /* 
+  - linear(default value): animation is going to be progress in linear rate
+  - ease-in: animation starts slowly and progress quakily
+  - ease-out: animation starts quakily and progress slowly
+  - we can specify custom carve using cubic-bezier() function. we can create custom cubic-bezier animation using this website: https://cubic-bezier.com
+  */
+  /* transition: transform 0.5s linear 1s; */
+  /* last value specifies after 1 seconde animation starts */
+
+  transition: transform 0.5s, background 0.5s;
 }
 
-/* .box:hover { */
-/* + value = closer to user, - value = farther from user*/
-/*first define perspective view which means the distance between user and element.*/
-/* transform: perspective(200px) translateZ(-50px); */
-
-/* transform: perspective(200px) rotateZ(45deg); */
-/* transform: perspective(200px) rotateY(45deg); */
-/* transform: perspective(200px) rotateX(45deg); */
-
-/* change transform origin, by default is center of element */
-/* transform-origin: x-offset y-offset */
-/* transform-origin: 0 0; top left corner of element */
-/* transform-origin: 0 50%; */
-/* } */
-/* ---------------------- */
-/* Apply animation to all elements : grab them in one container and apply animation to container */
-
-/* .container:hover {
-  transform: perspective(200px) rotateY(45deg);
-} */
-
-/* ----------------------------- */
-/* Apply animation to each element of container separately */
-/* .container:hover .box {
-  transform: perspective(200px) rotateY(45deg);
-} */
-
-/* ----------------------------- */
-/* make perspective of elements same in the container  */
-/* .container {
-  perspective: 200px;
+.box:hover {
+  transform: rotate(45deg);
+  background-color: dodgerblue;
 }
-
-.container:hover .box {
-  transform: rotateY(45deg);
-} */
-/* ------------------------------------------- */
-.container {
-  perspective: 200px;
-}
-
-.container:hover .box {
-  transform: rotateY(45deg);
-}
-.container:hover .box-two {
-  transform: rotateX(45deg);
-}
-/* 
-  - 3D Transformations: 
-    move elements along the z axes. 
-*/
