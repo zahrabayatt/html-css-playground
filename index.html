@@ -13,35 +13,25 @@
   </head>
   <body>
     <form>
-      <select>
-        <option value="">Select the option...</option>
-        <option value="1">option 1</option>
-        <option value="2">option 2</option>
-        <option value="3">option 3</option>
-      </select>
-      <select>
-        <option value="">Select the option...</option>
-        <option value="1" selected>option 1</option>
-        <option value="2">option 2</option>
-        <option value="3">option 3</option>
-      </select>
-      <select multiple>
-        <option value="1">option 1</option>
-        <option value="2">option 2</option>
-        <option value="3">option 3</option>
-      </select>
-      <select>
-        <optgroup label="Back-End Courses">
-          <option value="1">Django</option>
-          <option value="2">Asp.net</option>
-          <option value="3">Node.js</option>
-        </optgroup>
-        <optgroup label="Front-End Courses">
-          <option value="1">HTML</option>
-          <option value="2">CSS</option>
-          <option value="3">JS</option>
-        </optgroup>
-      </select>
+      <div>
+        <input type="checkbox" id="front-end" />
+        <label class="label-inline" for="front-end">Front-end</label>
+      </div>
+      <div>
+        <input type="checkbox" id="back-end" checked />
+        <label class="label-inline" for="back-end">Back-end</label>
+      </div>
+      <div>
+        <input type="checkbox" id="database" disabled />
+        <label class="label-inline" for="database">Database</label>
+      </div>
     </form>
+    <!-- 
+      - milligram make label block level element and we can use utility class in milligram to make label element a inline element.
+
+      - every input checkbox type element comes with a label which is have for attribute with value of id attribute of input element 
+
+      - if you click on label or checkbox element, the checkbox is going to be checked or unchecked. 
+    -->
   </body>
 </html>
