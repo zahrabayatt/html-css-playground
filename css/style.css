@@ -7,28 +7,75 @@
 html {
   font-size: 62.5%;
 }
+/* 1- Separate container and content */
+/* wrong way */
+/* .hero .btn {
+  background: gold;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
 
-/* wrong way:  */
-/* .one{
-  background: #ffdd36;
-}
+/* .side-bar .btn {
+  background: gold;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
 
-.two{
-  background: #ffdd36;
+/* write way */
+/* .btn {
+  background: gold;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+/* ---------------------------------------- */
+/* 2- Separate structure and skin */
+/* wrong way */
+/* .btn {
+  background: gold;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+
+/* .btn-blue {
+  background: dodgerblue;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 } */
 
 /* right way */
-:root {
-  /* this suda-selector matches html element and we can define custom property or global variables*/
-  --color-primary: #ffdd36; /* --name-of-custom-property*/
-  --border-size: 2px;
-  --border-radius: 10px;
+.btn {
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.one {
-  background: var(--color-primary);
+.btn-primary {
+  /* btn-gold is not reusable because if you change color you have to change the class's name */
+  background: gold;
 }
 
-.two {
-  background: var(--color-primary);
+.btn-secondary {
+  background: dodgerblue;
 }
+
+/* Object oriented CSS: a set of principles for structuring styles and make them reusable 
+    1- Separate container and content  
+    2- Separate structure and skin 
+*/
