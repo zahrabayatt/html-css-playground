@@ -8,17 +8,19 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="hero"><button class="btn">Sign Up</button></header>
-    <aside class="side-bar"><button class="btn">Contact</button></aside>
-    <br />
-    <header class="hero"><button class="btn">Sign Up</button></header>
-    <aside class="side-bar"><button class="btn-blue">Contact</button></aside>
-    <br />
-    <header class="hero">
-      <button class="btn btn-primary">Sign Up</button>
-    </header>
-    <aside class="side-bar">
-      <button class="btn btn-secondary">Contact</button>
-    </aside>
+    <!-- define element'class of block in this way: blockName__elementName -->
+    <!-- defiene modifier of block element in this way: blockName--modifierName  -->
+    <div class="card card--popular">
+      <header class="card__header">
+        ]
+        <!-- <span class="card__header__pric"></span> too long name -->
+        <span class="card__price"> </span>
+      </header>
+      <div class="card__body">
+        <!-- <button class="card__btn"></button>
+            this button is not specific for this block-->
+        <button class="btn"></button>
+      </div>
+    </div>
   </body>
 </html>
