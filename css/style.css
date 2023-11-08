@@ -8,74 +8,80 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* 1)some naming conventions:  
+  -kebab case: nav-bar
+  -camel case: navBar
+  -pascal case: NavBar
+  -snake case: nav_bar
+  get more info about naming conventions: 
+  https://medium.com/@code.ceeker/naming-conventions-camel-case-pascal-case-kebab-case-and-more-dc4e515b9652
+*/
+
+/* ----------------------------- */
+/* 2)sprite your style in sections*/
+/* basic styles */
+* {
+  box-sizing: border-box;
+}
+html {
 }
 
-.card {
-  max-width: 500px;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: 600;
-  background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 0 0 20px 30px #f9f9f9;
-  overflow: hidden;
-  margin: 2rem;
-  transform: rotate(-5deg);
-  transition: transform 0.2s ease-out;
+/* Typography */
+h1,
+h2,
+h3 {
 }
 
-.card:hover {
-  transform: rotate(0);
+/* Forms */
+
+/* Navigation bar */
+
+/* -------------------------------- */
+/* 3-avoid over-specific selectors */
+
+/* wrong way:  */
+div.nav > ul.items > li {
 }
 
-.card-content p {
-  margin: 0;
+/* right way: */
+.nav-item {
 }
 
-.card-content,
-.card-footer {
-  padding: 2rem;
-}
-
-.card-footer {
-  color: #fff;
-  background: rgb(116, 214, 144);
-  background: linear-gradient(
-    0deg,
-    rgba(116, 214, 144, 1) 0%,
-    rgba(92, 191, 187, 1) 100%
-  );
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-weight: bold;
-}
-
-.thumb {
-  width: 60px;
+/* -------------------------------- */
+/* 5- sort css property */
+.nav {
+  background-color: dodgerblue;
+  border: 3px solid white;
+  box-shadow: 0 0 30px tomato;
   height: 60px;
-  border-radius: 100%;
-  border: 3px solid #fff;
-  transition: transform 0.3s;
+  width: 60px;
 }
 
-.card:hover .thumb {
-  transform: scale(1.15);
+/* 6- style inheritance */
+/* wrong way */
+.nav-item {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-@media screen and (min-width: 768px) {
-  .card-content {
-    padding: 4rem;
-  }
-
-  .card-footer {
-    padding: 2rem 4rem;
-  }
+.nav-brand {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+/* right way */
+.nav {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* 
+  Best practices
+  1- follow a naming convention.
+  2- create logical sections in your stylesheet
+  3- avoid over-specific selectors
+  4- avoid !important
+  5- sort css property: ctrl+shift+p, sort lines ascending 
+  6- take advantage of style inheritance
+  7- Extract receptive patterns
+  8- avoid repetitive values (keep it DRY)
+*/
