@@ -3,24 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sidebar</title>
   </head>
   <body>
-    <!-- define element'class of block in this way: blockName__elementName -->
-    <!-- defiene modifier of block element in this way: blockName--modifierName  -->
-    <div class="card card--popular">
-      <header class="card__header">
-        ]
-        <!-- <span class="card__header__pric"></span> too long name -->
-        <span class="card__price"> </span>
-      </header>
-      <div class="card__body">
-        <!-- <button class="card__btn"></button>
-            this button is not specific for this block-->
-        <button class="btn"></button>
+    <div class="container">
+      <div class="content">
+        <button id="toggleButton">Toggle Sidebar</button>
+        <div class="main-container">
+          <div class="sidebar" id="sidebar">Sidebar Content</div>
+          <div class="main-content">Main Content</div>
+        </div>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
